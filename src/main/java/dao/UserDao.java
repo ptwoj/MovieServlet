@@ -7,8 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class UserDao {
     private static UserDao userdao;
@@ -19,6 +18,7 @@ public class UserDao {
     public boolean signUp(UserDto dto) {
         Connection conn = new JdbcConnection().getJdbc();
         boolean isSuccess = false;
+
         String sql = "INSERT INTO user (user_id, user_name, user_email, user_pwd, user_birthdate, user_phonenumber) " +
                 "VALUES (?, ?, ?, ?, ?, ?)";
         try {

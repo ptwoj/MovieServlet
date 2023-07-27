@@ -1,6 +1,9 @@
 package dto;
 
 public class UserDto {
+    public UserDto() {}
+
+    //    MySQL에 있는 테이블과 연동 시키기 위해 같은 변수를 선언
     private int user_seq;
     private String user_id;
     private String user_name;
@@ -8,6 +11,7 @@ public class UserDto {
     private String user_pwd;
     private String user_birthdate;
     private String user_phone_number;
+
 
     public String getUser_phone_number() {
         return user_phone_number;
@@ -17,9 +21,6 @@ public class UserDto {
         this.user_phone_number = user_phone_number;
     }
 
-    public UserDto() {
-
-    }
 
     public void createUser (int user_seq, String user_id, String user_name, String user_email, String user_pwd, String user_birthdate, String user_phone_number) {
         this.user_seq = user_seq;
